@@ -34,8 +34,9 @@ btn.addEventListener('click', () => {
                     span.style.color = 'green'
                 } else {
                     setTimeout(function(){
-                        blocksquare[0].classList.remove('active')
-                    blocksquare[1].classList.remove('active')
+                    for( i in blocksquare) {
+                        blocksquare[i].classList.remove('active')
+                    }
                     blocksquare = []
                     span.style.display = 'block'
                     }, 750)
